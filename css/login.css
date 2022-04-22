@@ -159,3 +159,17 @@
 .register-link:focus{
   color: var(--body-text);
 }
+
+.message{
+  position: fixed;
+  top: -2.5rem;
+  background-color: hsl(340, 100%, 40%);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: white;
+  transition: top 200ms ease-in-out;
+}
+
+.message.show{
+  top: 1rem;
+}
