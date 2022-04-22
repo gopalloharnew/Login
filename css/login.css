@@ -1,0 +1,161 @@
+.login-box{
+  width: 400px;
+  background-color: hsl(210, 50%, 20%);
+  padding: 2rem;
+}
+
+.login-header{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+#username, #password, #submit{
+  all: unset;
+}
+
+.login-form, .form-item, #username, #password, #submit{
+  width: 100%;
+}
+
+#username, #password{
+  height: 3rem;
+  border-bottom: 2px solid hsl(210, 50%, 70%);
+}
+
+.form-item{
+  position: relative;
+  padding-top: 3rem;
+}
+
+.username-label, .password-label{
+  position: absolute;
+  left: 0rem;
+  top: 3.75rem;
+  transition: top 200ms ease-in-out,
+              color 200ms ease-in-out;
+}
+
+.underline{
+  width: 0%;
+  height: 2px;
+  background-color: var(--body-text);
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(-50%);
+  transition: width 200ms ease-in-out;
+  left: 50%;
+}
+
+#username:focus ~ .underline,
+#password:focus ~ .underline{
+  width: 100%;
+}
+
+#username:valid + .username-label,
+#username:focus + .username-label,
+#password:valid + .password-label,
+#password:focus + .password-label{
+  top: 1.5rem;
+  color: hsl(210, 50%, 70%);
+}
+
+.password-toggle-button{
+  all: unset;
+  font-size: 12px;
+  height: 2rem;
+  padding: 0rem 0.5rem;
+  right: 0px;
+  position: absolute;
+  bottom: 0.5rem;
+  cursor: pointer;
+  background-color: hsl(210, 50%, 30%);
+  border-radius: 0.25rem;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.password-toggle-button:hover,
+.password-toggle-button:focus{
+  background-color: hsl(210, 50%, 40%);
+  transform: translateY(-10%);
+}
+
+#rememberMe{
+  position: fixed;
+  top: -1000vh;
+  left: -1000vw;
+}
+
+.remember-me-label{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.remember-me-switch{
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  background-color: hsl(210, 50%, 30%);
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  position: relative;
+  box-shadow: 0rem 0rem 0rem 0.1rem transparent;
+}
+
+.remember-me-switch::before{
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  background-color: var(--body-text);
+  transition: left 200ms ease-in-out;
+}
+
+.remember-me-switch:hover{
+  background-color: hsl(210, 50%, 40%);
+}
+
+.remember-me-wraper:focus-within .remember-me-switch{
+  box-shadow: 0rem 0rem 0rem 0.1rem var(--body-text);
+}
+
+#rememberMe:checked + label .remember-me-switch::before{
+  left: 28px !important;
+}
+
+#submit{
+  background-color: hsl(210, 50%, 70%);
+  color: hsl(210, 50%, 20%);
+  cursor: pointer;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+#submit:focus,
+#submit:hover
+{
+  background-color: var(--body-text);
+}
+
+.register-link{
+  color: hsl(210, 100%, 75%);
+  transition: color 200ms ease-in-out;
+  outline: none;
+}
+
+.register-link:hover,
+.register-link:focus{
+  color: var(--body-text);
+}

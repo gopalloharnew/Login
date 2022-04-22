@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+  </head>
+  <body>
+    <div class="login-box">
+      <header class="login-header"><h2>Login Please!</h2></header>
+      <form action="" class="login-form">
+        <div class="form-item">
+          <input type="text" id="username" name="username" required>
+          <label for="username" class="username-label">Username</label>
+          <span class="underline"></span>
+        </div>
+        <div class="form-item">
+          <input type="text" id="password" name="password" required>
+          <label for="password" class="password-label">Password</label>
+          <button class="password-toggle-button">Show</button>
+          <span class="underline"></span>
+        </div>
+        <div class="form-item remember-me-wraper">
+          <input type="checkbox" name="rememberMe" id="rememberMe" checked>
+          <label for="rememberMe" class="remember-me-label">
+            <div class="remember-me-switch"></div>
+            <span>Remember Me</span>
+          </label>
+        </div>
+        <div class="form-item">
+          <button type="submit" id="submit">Login</button>
+        </div>
+      </form>
+      <footer class="login-footer">
+        Already have an Account? <a href="#" class="register-link">Register</a>
+        <!-- <br>or <a href="#">Forgot Password?</a> -->
+      </footer>
+    </div>
+  </body>
+</html>
